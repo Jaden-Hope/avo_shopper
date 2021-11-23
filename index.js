@@ -66,11 +66,11 @@ app.post('/newDeal', async (req, res) => {
 	res.redirect('/');
 })
 
-app.get('/search', async (req, res) => {
+app.get('/searchShops', async (req, res) => {
 	res.render('searchShops')
 })
 
-app.post('/search', async (req, res) => {
+app.post('/searchShops', async (req, res) => {
 	const searchResults = await factory.recommendDeals(req.body.budget);
 	res.render('searchShops', { searchResults })
 })
