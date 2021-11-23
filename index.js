@@ -34,7 +34,8 @@ app.get('/', async (req, res) => {
 });
 
 app.get('/show/:name/:shop', async (req, res) => {
-	const deals = await factory.dealsForShop(req.params.shop++);
+	req.params.shop++;
+	const deals = await factory.dealsForShop(req.params.shop);
 	res.render('index', { deals, name: req.params.name });
 })
 
