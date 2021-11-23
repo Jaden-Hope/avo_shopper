@@ -1,7 +1,5 @@
 const express = require('express');
 const { engine } = require('express-handlebars');
-const bodyParser = require('body-parser');
-const session = require('express-session')
 const avoFactory = require('./avo-shopper');
 const { Pool } = require('pg');
 
@@ -43,6 +41,7 @@ app.get('/show/:name/:shop', async (req, res) => {
 app.post('/shops', async (req, res) => {
 	let input = req.body.addShopIn;
 	let result = input[0].toUpperCase() + input.slice(1).toLowerCase();
+	console.log(result);
 	await factory.createShop(result)
 	res.redirect('/shops');
 })
