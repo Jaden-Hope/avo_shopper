@@ -10,10 +10,16 @@
       </li>
     {{/each}}
 
+  </ul>
+  <ul class="resultListg">
     <h2 class="center">{{name}}</h2>
 
     {{#each deals}}
-      <li class="listItem"><h3>Deal number: {{this.id}} --- {{this.qty}} for R{{this.price}}</h3></li>
+      <li class="resultListItem"><h3>Deal number:
+          {{this.id}}
+          ---
+          {{this.qty}}
+          for R{{this.price}}</h3></li>
     {{/each}}
   </ul>
 </div>
