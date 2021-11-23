@@ -1,0 +1,21 @@
+  <div>
+    <h2 class="center">
+      Add a new deal for Avacadoos!
+    </h2>
+    <br />
+    <form class="addNewDeal center" action="/newDeal" method="post">
+      <label for="newDealQty">Quantity:</label>
+      <input class="break" type="number" name="newDealQty" required/>
+      <br />
+      <label for="newDealPrice">Price:</label>
+      <input class="break" type="number" name="newDealPrice" required/>
+      <br />
+      <select name="shops" class="break" required>
+        {{#each shops}}
+          <option value="{{this.id}}">{{this.name}}</option>
+        {{/each}}
+      </select>
+      <br>
+      <button type="submit" class="addBtn">Add Deal</button>
+    </form>
+  </div>

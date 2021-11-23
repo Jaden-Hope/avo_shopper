@@ -1,0 +1,20 @@
+<h2 class="center">Enter budget:</h2>
+<form class="center" action="/search" method="post">
+  <input class="break" type="number" name="budget" required />
+  <br />
+  <button type="submit" class="addBtn">Search</button>
+</form>
+<br />
+<ul class="resultList">
+  {{#each searchResults}}
+    <li class="resultListItem">
+      {{this.name}}:
+      <br />
+      {{this.qty}}
+      for R{{this.price}}
+      <br />
+      R{{this.unit_price}}
+      per Avocodoo
+    </li>
+  {{/each}}
+</ul>

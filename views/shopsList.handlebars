@@ -1,0 +1,11 @@
+  <div class="content center">
+    <h2 class="center">Shops selling Avacadoos!</h2>
+    <br />
+    <ul class="list">
+      {{#each shopList}}
+        <a href="/show/{{this.name}}/{{@index}}" class="listItem addBtn">{{this.name}}</a>
+      {{/each}}
+    </ul>
+    <br>
+    <a href="addShop" class="navBtn">Add new shop</a>
+  </div>

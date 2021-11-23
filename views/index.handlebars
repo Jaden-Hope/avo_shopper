@@ -1,1 +1,19 @@
-<h2>Best deals</h2>
+<div class="content">
+  <ul class="list">
+    {{#each topDeals}}
+      <li class="listItem">
+        <h3>{{this.shop_name}}</h3>
+        <img class="avoImg" src="Avo{{@index}}.png" />
+        <br />
+        {{this.qty}}
+        for R{{this.price}}
+      </li>
+    {{/each}}
+
+    <h2 class="center">{{name}}</h2>
+
+    {{#each deals}}
+      <li class="listItem"><h3>Deal number: {{this.id}} --- {{this.qty}} for R{{this.price}}</h3></li>
+    {{/each}}
+  </ul>
+</div>
